@@ -7,10 +7,10 @@ const container = document.getElementById('mbox');
 container.innerHTML = ''
 
 for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
+    let key = i
     let value = localStorage.getItem(key);
     let usbHTML = `
-        <div class="usb-item"onclick="USBread('${(key)}')">
+        <div class="usb-item" onclick="USBread('${(key)}')" id = "${key}">
             <div class="metal"></div>
             <div class="plastic">${key}</div>
         </div>
@@ -32,9 +32,22 @@ function newUSB(vari, varia) {
 let variab;
 let key;
 let value;
+let sex;
 
-function USBread(variab) {
-    let value = localStorage.getItem(variab);
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+async function USBread(variab) {
+    sex = document.getElementById(variab);
+   if (sex) {
+        sex.style.transition = "margin-top 1s ease";
+        sex.style.marginTop = '-230px';
+    }
+    await delay(500);
+    if (sex) {
+        sex.style.marginTop = '0px';
+    }
+    key = localStorage.key(variab);
+    let value = localStorage.getItem(key);
     if (value !== null) {
         alert(value);
     } else {
