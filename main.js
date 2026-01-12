@@ -57,14 +57,3 @@ async function USBread(variab) {
 
 
 
-
-
-// 값 읽어오기
-//const username = localStorage.getItem('username');
-//const settings = JSON.parse(localStorage.getItem('userSettings'));
-
-// 값 삭제
-// localStorage.removeItem('username');
-
-// 모든 값 삭제
-// localStorage.clear();
