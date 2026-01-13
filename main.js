@@ -23,10 +23,11 @@ let varia
 function newUSB(vari, varia) {
     do{
         vari = prompt("Add USB's Name", "USB")
-    }while(localStorage.getItem(vari)!==null)
-    varia = prompt("Add memo", "xenonbomin54 is so cue")
+    }while(localStorage.getItem(vari)!==null);
+    varia = prompt("Add memo", "xenonbomin54 is so cute");
 
-    localStorage.setItem(vari, varia)
+    localStorage.setItem(vari, varia);
+    location.reload();
 }
 
 let variab;
@@ -54,6 +55,3 @@ async function USBread(variab) {
         alert("데이터가 존재하지 않습니다.");
     }
 }
-
-
-
