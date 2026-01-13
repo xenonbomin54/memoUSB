@@ -8,11 +8,14 @@ container.innerHTML = ''
 
 for (let i = 0; i < localStorage.length; i++) {
     let key = i
-    let value = localStorage.getItem(key);
+    let value = localStorage.key(key);
     let usbHTML = `
-        <div class="usb-item" onclick="USBread('${(key)}')" id = "${key}">
+        <div class="usb-item" id = "${key}">
             <div class="metal"></div>
-            <div class="plastic">${key}</div>
+            <div class="plastic" onclick="USBread('${(key)}')">
+            <div class="key">${value}</div>
+            <div clsas="delete">X</div>
+            </div>
         </div>
     `;
     container.insertAdjacentHTML('beforeend', usbHTML);
