@@ -14,8 +14,8 @@ for (let i = 0; i < localStorage.length; i++) {
             <div class="metal"></div>
             <div class="plastic" onclick="USBread('${(key)}')">
             <div class="key">${value}</div>
-            <div clsas="delete">X</div>
             </div>
+            <div clsas="delete" style="background-color: red;text-align: center;padding: 2px;border-radius: 5px;width: 100px;" onclick="localStorage.removeItem('${value}');location.reload();">X</div>
         </div>
     `;
     container.insertAdjacentHTML('beforeend', usbHTML);
