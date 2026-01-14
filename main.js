@@ -15,7 +15,7 @@ for (let i = 0; i < localStorage.length; i++) {
             <div class="plastic" onclick="USBread('${(key)}')">
             <div class="key">${value}</div>
             </div>
-            <div clsas="delete" style="background-color: red;text-align: center;padding: 2px;border-radius: 5px;width: 100px;" onclick="localStorage.removeItem('${value}');location.reload();">X</div>
+            <div clsas="delete" style="background-color: red;text-align: center;padding: 2px;border-radius: 10px;width: 100px;" onclick="deleteUSB('${value}');">X</div>
         </div>
     `;
     container.insertAdjacentHTML('beforeend', usbHTML);
@@ -31,6 +31,19 @@ function newUSB(vari, varia) {
 
     localStorage.setItem(vari, varia);
     location.reload();
+}
+let bomin
+
+function deleteUSB(bomin){
+    if(bomin==="default"){
+        alert("기본 메모는 삭제하실 수 없습니다.")
+    }else{
+        if(confirm("정말 삭제하시겠습니까? (되돌릴 수 없습니다.)")){
+		alert("삭제되었습니다");
+        localStorage.removeItem(bomin);
+        location.reload();
+	}
+    }
 }
 
 let variab;
