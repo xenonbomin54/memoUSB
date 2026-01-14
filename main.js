@@ -10,12 +10,12 @@ for (let i = 0; i < localStorage.length; i++) {
     let key = i
     let value = localStorage.key(key);
     let usbHTML = `
-        <div class="usb-item" id = "${key}">
+        <div class="usb-item" id = "${key}" style="margin-right:100px;">
             <div class="metal"></div>
             <div class="plastic" onclick="USBread('${(key)}')">
             <div class="key">${value}</div>
             </div>
-            <div clsas="delete" style="background-color: red;text-align: center;padding: 2px;border-radius: 10px;width: 100px;" onclick="deleteUSB('${value}');">X</div>
+            <div clsas="delete" style="color:white;margin-top:20px;background-color: red;text-align: center;padding: 2px;border-radius: 10px;width: 116px;" onclick="deleteUSB('${value}');">X</div>
         </div>
     `;
     container.insertAdjacentHTML('beforeend', usbHTML);
