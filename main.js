@@ -7,7 +7,7 @@ const container = document.getElementById('mbox');
 container.innerHTML = ''
 
 for (let i = 0; i < localStorage.length; i++) {
-    let key = i
+    let key = i;
     let value = localStorage.key(key);
     let usbHTML = `
         <div class="usb-item" id = "${key}" style="margin-right:100px;">
@@ -21,7 +21,7 @@ for (let i = 0; i < localStorage.length; i++) {
     container.insertAdjacentHTML('beforeend', usbHTML);
 }
 let vari;
-let varia
+let varia;
 
 function newUSB(vari, varia) {
     do{
@@ -32,7 +32,7 @@ function newUSB(vari, varia) {
     localStorage.setItem(vari, varia);
     location.reload();
 }
-let bomin
+let bomin;
 
 function deleteUSB(bomin){
     if(bomin==="default"){
