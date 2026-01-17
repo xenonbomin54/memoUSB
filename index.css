@@ -14,6 +14,8 @@
 #hbox {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
 }
 
 #sicon {
@@ -27,6 +29,8 @@
     margin-left: 85px;
     display: flex;
     z-index: 10000;
+    position: relative;
+    z-index: 0;
 }
 
 .metal {
