@@ -71,3 +71,33 @@ async function USBread(variab) {
         alert("데이터가 존재하지 않습니다.");
     }
 }
+
+let USBF = 0;
+let currentX = 0; 
+const bbox = document.getElementById('mbox');
+
+bbox.style.transition = "transform 0.3s ease-out";
+
+document.addEventListener('keydown', function(event) {
+    if (event.repeat) return;
+
+    const items = document.querySelectorAll('.usb-item');
+    const usbCount = items.length;
+    const moveAmount = 230;
+
+    if (event.key === 'ArrowRight') {
+        if (USBF > 0) {
+            USBF--;
+            currentX = - (USBF * moveAmount);
+        }
+    } else if (event.key === 'ArrowLeft') {
+        if (USBF < usbCount - 1) {
+            USBF++;
+            currentX = - (USBF * moveAmount);
+        }
+    } else {
+        return;
+    }
+
+    bbox.style.transform = `translateX(${currentX}px)`;
+});
