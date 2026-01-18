@@ -83,7 +83,7 @@ document.addEventListener('keydown', function(event) {
 
     const items = document.querySelectorAll('.usb-item');
     const usbCount = items.length;
-    const moveAmount = 230;
+    const moveAmount = 220;
 
     if (event.key === 'ArrowRight') {
         if (USBF > 0) {
