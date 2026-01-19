@@ -29,6 +29,7 @@ body {
 }
 
 #mbox {
+    margin-top: 100px;
     padding: 100px;
     margin-left: 85px;
     display: flex;

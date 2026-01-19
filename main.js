@@ -105,11 +105,13 @@ document.addEventListener('keydown', function(event) {
     items.forEach(item => {
         item.style.transition = "transform 0.3s ease";
         item.style.transform = "scale(1)";
+        item.style.filter = "brightness(50%)";
     });
 
     const currentItem = items[USBF];
     if (currentItem) {
-        currentItem.style.transform = "scale(1.3)";
+        currentItem.style.transform = "scale(1.5)";
+        currentItem.style.filter = "brightness(100%)";
     }
 
     bbox.style.transform = `translateX(${currentX}px)`;
