@@ -20,6 +20,9 @@ for (let i = 0; i < localStorage.length; i++) {
     `;
     container.insertAdjacentHTML('beforeend', usbHTML);
 }
+
+
+
 let vari;
 let varia;
 
@@ -97,6 +100,16 @@ document.addEventListener('keydown', function(event) {
         }
     } else {
         return;
+    }
+
+    items.forEach(item => {
+        item.style.transition = "transform 0.3s ease";
+        item.style.transform = "scale(1)";
+    });
+
+    const currentItem = items[USBF];
+    if (currentItem) {
+        currentItem.style.transform = "scale(1.3)";
     }
 
     bbox.style.transform = `translateX(${currentX}px)`;
