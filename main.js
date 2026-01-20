@@ -88,12 +88,12 @@ document.addEventListener('keydown', function(event) {
     const usbCount = items.length;
     const moveAmount = 220;
 
-    if (event.key === 'ArrowRight') {
+    if (event.key === 'ArrowLeft') {
         if (USBF > 0) {
             USBF--;
             currentX = - (USBF * moveAmount);
         }
-    } else if (event.key === 'ArrowLeft') {
+    } else if (event.key === 'ArrowRight') {
         if (USBF < usbCount - 1) {
             USBF++;
             currentX = - (USBF * moveAmount);
