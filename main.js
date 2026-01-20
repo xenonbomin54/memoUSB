@@ -79,6 +79,7 @@ function deleteUSB(bomin){
     }
 }
 
+
 let variab;
 let key;
 let value;
@@ -87,21 +88,23 @@ let sex;
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function USBread(variab) {
-    sex = document.getElementById(variab);
-   if (sex) {
-        sex.style.transition = "margin-top 1s ease";
-        sex.style.marginTop = '-230px';
-    }
-    await delay(500);
-    if (sex) {
-        sex.style.marginTop = '0px';
-    }
-    key = localStorage.key(variab);
-    let value = localStorage.getItem(key);
-    if (value !== null) {
-        alert(value);
-    } else {
-        alert("데이터가 존재하지 않습니다.");
+    if(Number(variab)===USBF){
+        sex = document.getElementById(variab);
+        if (sex) {
+            sex.style.transition = "margin-top 0.5s ease-out";
+            sex.style.marginTop = '-230px';
+        }
+        await delay(500);
+        if (sex) {
+            sex.style.marginTop = '0px';
+        }
+        key = localStorage.key(variab);
+        let value = localStorage.getItem(key);
+        if (value !== null) {
+            alert(value);
+        } else {
+            alert("데이터가 존재하지 않습니다.");
+        }
     }
 }
 
