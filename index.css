@@ -65,6 +65,8 @@ body {
     height: 200px;
     border-radius: 0px 0px 25px 25px;
     color: white;
+    z-index: 1000;
+    position: relative;
 }
 
 #btn {

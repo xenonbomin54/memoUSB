@@ -3,6 +3,8 @@ if (localStorage.getItem('default')===null){
 }
 
 
+
+
 const container = document.getElementById('mbox');
 container.innerHTML = ''
 
@@ -15,11 +17,39 @@ for (let i = 0; i < localStorage.length; i++) {
             <div class="plastic" onclick="USBread('${(key)}')">
             <div class="key">${value}</div>
             </div>
-            <div clsas="delete" style="color:white;margin-top:20px;background-color: red;text-align: center;padding: 2px;border-radius: 10px;width: 116px;" onclick="deleteUSB('${value}');">X</div>
+            <div class="delete" style="color:white;margin-top:-40px;background-color: red;text-align: center;padding: 2px;border-radius: 10px;width: 50px;margin-left:33px;" onclick="deleteUSB('${value}');">X</div>
         </div>
     `;
     container.insertAdjacentHTML('beforeend', usbHTML);
 }
+
+    const items = document.querySelectorAll('.usb-item');
+    const ditems = document.querySelectorAll('.delete');
+
+    let USBF = 0;
+
+    items.forEach(item => {
+        item.style.transition = "transform 0.3s ease";
+        item.style.transform = "scale(1)";
+        item.style.filter = "brightness(50%)";
+    });
+
+    const currentItem = items[USBF];
+    if (currentItem) {
+        currentItem.style.transform = "scale(1.5)";
+        currentItem.style.filter = "brightness(100%)";
+    }
+
+    ditems.forEach(item => {
+        item.style.transition = "margin-top 0.3s ease";
+        item.style.marginTop = "-40px";
+    });
+
+    const dItem = ditems[USBF];
+    if (dItem) {
+        dItem.style.marginTop = "20px";
+    }
+
 
 
 
@@ -75,7 +105,6 @@ async function USBread(variab) {
     }
 }
 
-let USBF = 0;
 let currentX = 0; 
 const bbox = document.getElementById('mbox');
 
@@ -84,7 +113,6 @@ bbox.style.transition = "transform 0.3s ease-out";
 document.addEventListener('keydown', function(event) {
     if (event.repeat) return;
 
-    const items = document.querySelectorAll('.usb-item');
     const usbCount = items.length;
     const moveAmount = 220;
 
@@ -102,6 +130,7 @@ document.addEventListener('keydown', function(event) {
         return;
     }
 
+
     items.forEach(item => {
         item.style.transition = "transform 0.3s ease";
         item.style.transform = "scale(1)";
@@ -112,6 +141,16 @@ document.addEventListener('keydown', function(event) {
     if (currentItem) {
         currentItem.style.transform = "scale(1.5)";
         currentItem.style.filter = "brightness(100%)";
+    }
+
+    ditems.forEach(item => {
+        item.style.transition = "margin-top 0.3s ease";
+        item.style.marginTop = "-40px";
+    });
+
+    const dItem = ditems[USBF];
+    if (dItem) {
+        dItem.style.marginTop = "20px";
     }
 
     bbox.style.transform = `translateX(${currentX}px)`;
