@@ -101,6 +101,8 @@ async function USBread(variab) {
         key = localStorage.key(variab);
         let value = localStorage.getItem(key);
         if (value !== null) {
+            const myElement = document.querySelector('modal');
+            myElement.classList.add('active');
             alert(value);
         } else {
             alert("데이터가 존재하지 않습니다.");
