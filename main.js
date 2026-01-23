@@ -96,8 +96,8 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 async function USBread(variab) {
     if(Number(variab)===USBF){
         sex = document.getElementById(variab);
+        sex.style.transition = "margin-top 0.5s ease-out";
         if (sex) {
-            sex.style.transition = "margin-top 0.5s ease-out";
             sex.style.marginTop = '-230px';
         }
         await delay(500);
@@ -132,7 +132,7 @@ const bbox = document.getElementById('mbox');
 
 bbox.style.transition = "transform 0.3s ease-out";
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', async function(event) {
     if (event.repeat) return;
 
     const usbCount = items.length;
@@ -148,6 +148,8 @@ document.addEventListener('keydown', function(event) {
             USBF++;
             currentX = - (USBF * moveAmount);
         }
+    } else if (event.key === 'ArrowUp'){
+        await USBread(USBF);
     } else {
         return;
     }
