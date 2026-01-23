@@ -111,11 +111,33 @@ body {
     border-radius: 20px;
     width: 40%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
 
 }
 
 .close_btn {
+    font-size: 30px;
     margin-top: 20px;
     padding: 10px 20px;
     cursor: pointer;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    transition: 0.1s;
+}
+
+.close_btn:hover {
+    transition: 0.1s;
+    scale: 1.05;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 80px;
+}
+
+h3 {
+    font-size: 50px;
+    font-weight: 300;
 }

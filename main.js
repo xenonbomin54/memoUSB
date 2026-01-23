@@ -86,9 +86,9 @@ let value;
 let sex;
 
 const modal = document.querySelector('.modal');
-const modalPopup = document.querySelector('.modal_popup p');
+const modalPopup = document.querySelector('.modal_popup h3');
 const closeBtn = document.querySelector('.close_btn');
-const modalTitle = document.querySelector('.modal_popup h3');
+const modalTitle = document.querySelector('.modal_popup h1');
 
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
