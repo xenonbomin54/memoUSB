@@ -85,6 +85,12 @@ let key;
 let value;
 let sex;
 
+const modal = document.querySelector('.modal');
+const modalPopup = document.querySelector('.modal_popup p');
+const closeBtn = document.querySelector('.close_btn');
+const modalTitle = document.querySelector('.modal_popup h3');
+
+
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function USBread(variab) {
@@ -101,14 +107,25 @@ async function USBread(variab) {
         key = localStorage.key(variab);
         let value = localStorage.getItem(key);
         if (value !== null) {
-            const myElement = document.querySelector('modal');
-            myElement.classList.add('active');
-            alert(value);
+            openModal(key, value);
         } else {
             alert("데이터가 존재하지 않습니다.");
         }
     }
 }
+
+function openModal(title, content) {
+    modalTitle.textContent = title;
+    modalPopup.textContent = content;
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+closeBtn.addEventListener('click', closeModal);
+
 
 let currentX = 0; 
 const bbox = document.getElementById('mbox');
