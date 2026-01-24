@@ -78,6 +78,34 @@ function deleteUSB(bomin){
 	}
     }
 }
+let rptv = 0;
+let variable;
+let variable2;
+
+function leftkey(variable){
+    const enterEvent = new KeyboardEvent('keydown', {
+        key: 'ArrowLeft',
+        code: 'ArrowLeft',
+        bubbles: true,
+        cancelable: true
+    });
+    for(rptv=0;rptv<variable;rptv++){
+        document.dispatchEvent(enterEvent);
+    }
+}
+
+function rightkey(variable2){
+    const enterEvent = new KeyboardEvent('keydown', {
+        key: 'ArrowRight',
+        code: 'ArrowRight',
+        bubbles: true,
+        cancelable: true
+    });
+    for(rptv=0;rptv<variable2;rptv++){
+        document.dispatchEvent(enterEvent);
+    }
+}
+
 
 
 let variab;
@@ -109,8 +137,12 @@ async function USBread(variab) {
         if (value !== null) {
             openModal(key, value);
         } else {
-            alert("데이터가 존재하지 않습니다.");
+            alert("뭔가 이상한데;; 파일이 없는데? 이런일이 발생할리가 없지만 일단 문구 넣어봄 ㅋㅋ");
         }
+    } else if(Number(variab)<USBF){
+        leftkey(USBF-variab);
+    } else{
+        rightkey(variab-USBF);
     }
 }
 
