@@ -24,8 +24,9 @@ body {
 
 #sicon {
     margin-top: 15px;
-    width: 80px;
+    width: 60px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 #mbox {
@@ -69,20 +70,6 @@ body {
     position: relative;
 }
 
-#btn {
-    border-radius: 10px;
-    color: white;
-    background-color: black;
-    border: none;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 30px;
-    margin-left: 100px;
-}
-
-#settingbox{
-
-}
 
 .delete {
     background-color: red !important;
@@ -145,4 +132,9 @@ h1 {
 h3 {
     font-size: 50px;
     font-weight: 300;
+}
+
+#settingbox {
+    width: 100px;
+    padding-right: 150px;
 }

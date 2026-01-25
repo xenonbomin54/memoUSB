@@ -57,10 +57,12 @@ let vari;
 let varia;
 
 function newUSB(vari, varia) {
-    do{
-        vari = prompt("Add USB's Name", "USB")
-    }while(localStorage.getItem(vari)!==null);
-    varia = prompt("Add memo", "xenonbomin54 is so cute");
+    vari = prompt("Add USB's Name", "USB")
+    if(vari.trim()!==null){
+        if(localStorage.getItem(vari)===null){
+            varia = prompt("Add memo", "xenonbomin54 is so cute");
+        }
+    }
 
     localStorage.setItem(vari, varia);
     location.reload();
