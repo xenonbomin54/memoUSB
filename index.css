@@ -13,6 +13,7 @@ body {
     width: fit-content;
     border-radius: 20px;
     font-weight: 600;
+    box-shadow: inset 5px 5px 10px 4px rgba(255, 255, 255, 0.200);
 }   
 
 #hbox {
@@ -45,13 +46,15 @@ body {
     transition: 0.2s;
     margin-top: 0px;
     margin-left: 25px;
-    background-color: rgb(155, 155, 155);
+    background: linear-gradient(135deg, #acacac 0%, #686868 100%);
     padding: 10px;
     width: 50px;
     height: 60px;
     position: relative;
     z-index: 1000;
 }
+
+
 
 .plastic {
     vertical-align: middle;
@@ -60,14 +63,15 @@ body {
     transition: 0.2s;
     margin-top: 0px;
     margin-right: 200px;
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(135deg, #2b2b2b 0%, #000000 100%);
     padding: 10px;
     width: 100px !important;
     height: 200px;
-    border-radius: 0px 0px 25px 25px;
+    border-radius: 5px 5px 25px 25px;
     color: white;
     z-index: 1000;
     position: relative;
+    box-shadow: inset 5px 5px 10px 4px rgba(255, 255, 255, 0.205);
 }
 
 
