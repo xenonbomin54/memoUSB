@@ -13,7 +13,11 @@ for (let i = 0; i < localStorage.length; i++) {
     let value = localStorage.key(key);
     let usbHTML = `
         <div class="usb-item" id = "${key}" style="margin-right:100px;">
-            <div class="metal"></div>
+            <div class="metal">
+                <div id="mehole1"></div>
+                <div id="meline"></div>
+                <div id="mehole2"></div>
+            </div>
             <div class="plastic" onclick="USBread('${(key)}')">
             <div class="key">${value}</div>
             </div>
