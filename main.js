@@ -27,6 +27,12 @@ for (let i = 0; i < localStorage.length; i++) {
     container.insertAdjacentHTML('beforeend', usbHTML);
 }
 
+    function isMobileByScreenWidth() {
+        const mobileWidthThreshold = 768;
+
+        return window.innerWidth < mobileWidthThreshold;
+    }
+
     const items = document.querySelectorAll('.usb-item');
     const ditems = document.querySelectorAll('.delete');
 
@@ -180,11 +186,17 @@ document.addEventListener('keydown', async function(event) {
         if (USBF > 0) {
             USBF--;
             currentX = - (USBF * moveAmount);
+            if (isMobileByScreenWidth()) {
+                currentX = - (USBF * moveAmount)-300;
+            }
         }
     } else if (event.key === 'ArrowRight') {
         if (USBF < usbCount - 1) {
             USBF++;
             currentX = - (USBF * moveAmount);
+            if (isMobileByScreenWidth()) {
+                currentX = - (USBF * moveAmount)-300;
+            }
         }
     } else if (event.key === 'ArrowUp'){
         await USBread(USBF);
