@@ -187,7 +187,7 @@ document.addEventListener('keydown', async function(event) {
             USBF--;
             currentX = - (USBF * moveAmount);
             if (isMobileByScreenWidth()) {
-                currentX = - (USBF * moveAmount)-300;
+                currentX = - (USBF * moveAmount)-270;
             }
         }
     } else if (event.key === 'ArrowRight') {
@@ -195,7 +195,7 @@ document.addEventListener('keydown', async function(event) {
             USBF++;
             currentX = - (USBF * moveAmount);
             if (isMobileByScreenWidth()) {
-                currentX = - (USBF * moveAmount)-300;
+                currentX = - (USBF * moveAmount)-270;
             }
         }
     } else if (event.key === 'ArrowUp'){

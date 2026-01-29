@@ -182,13 +182,12 @@ h3 {
         color: white;
         padding: 15px;
         padding-top: 30px;
-        font-size: 15px;
-        width: 100px;
+        font-size: 25px;
+        width: fit-content;
         height: fit-content;
         border-radius: 20px;
         font-weight: 600;
         box-shadow: inset 5px 5px 10px 4px rgba(255, 255, 255, 0.200);
-        overflow-wrap: break-word;
 }   
 #mbox {
     margin-top: 100px;
@@ -207,5 +206,12 @@ h3 {
 }
 #bbox {
     text-align:center;
+}
+#LR{
+    width: 80px;
+}
+#UU{
+    width: 80px;
+    margin: 20px;
 }
 }
