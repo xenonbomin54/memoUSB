@@ -101,9 +101,17 @@ function leftkey(variable){
         bubbles: true,
         cancelable: true
     });
-    for(rptv=0;rptv<variable;rptv++){
         document.dispatchEvent(enterEvent);
-    }
+}
+
+function upkey(){
+    const enterEvent = new KeyboardEvent('keydown', {
+        key: 'ArrowUp',
+        code: 'ArrowUp',
+        bubbles: true,
+        cancelable: true
+    });
+        document.dispatchEvent(enterEvent);
 }
 
 function rightkey(variable2){
@@ -113,9 +121,7 @@ function rightkey(variable2){
         bubbles: true,
         cancelable: true
     });
-    for(rptv=0;rptv<variable2;rptv++){
         document.dispatchEvent(enterEvent);
-    }
 }
 
 
