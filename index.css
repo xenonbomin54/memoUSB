@@ -209,7 +209,9 @@ h3 {
         scale: 0.5;
     }
     #sicon {
-        display: none;
+        margin-top: 0vh;
+        width: 10vw;
+        margin-right: 20px;
     }
     #bbox {
         display:flex;

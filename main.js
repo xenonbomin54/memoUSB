@@ -27,6 +27,7 @@ for (let i = 0; i < localStorage.length; i++) {
     container.insertAdjacentHTML('beforeend', usbHTML);
 }
 
+
     function isMobileByScreenWidth() {
         const mobileWidthThreshold = 768;
 
