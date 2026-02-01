@@ -223,11 +223,13 @@ h3 {
         display:block;
         width: 16vw;
         height: 16vw;
+        position: fixed;
     }
     #UU{
         display:block;
         width: 16vw;
         height: 16vw;
         margin: 5vh;
+        position: fixed;
     }
 }
