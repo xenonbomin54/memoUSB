@@ -236,3 +236,7 @@ document.addEventListener('keydown', async function(event) {
 
     bbox.style.transform = `translateX(${currentX}px)`;
 });
+
+function notYet() {
+    window.alert("This function is not yet developed...sorry")
+}
