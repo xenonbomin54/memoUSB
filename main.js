@@ -2,8 +2,7 @@ if (localStorage.getItem('default')===null){
     localStorage.setItem('default', 'thank you for using my USB style memo program');
 }
 
-
-
+const isMobile = window.innerWidth <= 768
 
 const container = document.getElementById('mbox');
 container.innerHTML = ''
@@ -144,12 +143,18 @@ async function USBread(variab) {
     if(Number(variab)===USBF){
         sex = document.getElementById(variab);
         sex.style.transition = "margin-top 0.5s ease-out";
-        if (sex) {
-            sex.style.marginTop = '-230px';
+        if(isMobile){
+            if (sex) {
+                sex.style.marginTop = '-50vh';
+            }
+        }else {
+            if (sex) {
+                sex.style.marginTop = '-21vh';
+            }
         }
         await delay(500);
         if (sex) {
-            sex.style.marginTop = '0px';
+            sex.style.marginTop = '0vh';
         }
         key = localStorage.key(variab);
         let value = localStorage.getItem(key);
@@ -240,3 +245,5 @@ document.addEventListener('keydown', async function(event) {
 function notYet() {
     window.alert("This function is not yet developed...sorry")
 }
+
+
