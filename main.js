@@ -159,7 +159,7 @@ async function USBread(variab) {
         if (value !== null) {
             openModal(key, value);
         } else {
-            alert("뭔가 이상한데;; 파일이 없는데? 이런일이 발생할리가 없지만 일단 문구 넣어봄 ㅋㅋ");
+            alert("파일이 존재하지 않습니다.");
         }
     } else if(Number(variab)<USBF){
         leftkey(USBF-variab);
