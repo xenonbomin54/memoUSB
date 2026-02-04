@@ -177,63 +177,16 @@ h3 {
         display:none;
     }
 
+    .mob {
+        display: none;
+    }
+
 @media screen and (max-width: 768px) {
-    body {
-        overflow: hidden;
+    #kkk {
+        display: none;
         
     }
-    #titleBox {
-        margin-top: -28px;
-        margin-left: 10px;
-        background-color: black;
-        color: white;
-        padding: 15px;
-        padding-top: 30px;
-        font-size: 25px;
-        width: fit-content;
-        height: fit-content;
-        border-radius: 20px;
-        font-weight: 600;
-        box-shadow: inset 5px 5px 10px 4px rgba(255, 255, 255, 0.200);
-    }   
-    #mbox {
-        margin-top: 100px;
-        padding: 100px;
-        margin-left: 30px;
-        display: flex;
-        z-index: 10000;
-        position: relative;
-        z-index: 0;
-        transition: transform 0.3s ease-out; 
-        will-change: transform;
-        scale: 0.5;
-    }
-    #sicon {
-        margin-top: 0vh;
-        width: 10vw;
-        margin-right: 20px;
-    }
-    #bbox {
-        display:flex;
-        text-align:center;
-        justify-content: center !important;
-        position:fixed;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        top: 70vh;
-    }
-    #LR{
-        margin-top:5vh;
-        display:block;
-        width: 16vw;
-        height: 16vw;
-    }
-    #UU{
-        display:block;
-        width: 16vw;
-        height: 16vw;
-        margin: 5vh;
+    .mob {
+        display: block;
     }
 }
