@@ -124,8 +124,6 @@ function rightkey(variable2){
         document.dispatchEvent(enterEvent);
 }
 
-
-
 let variab;
 let key;
 let value;
