@@ -187,6 +187,9 @@ h3 {
         
     }
     .mob {
+        font-weight: 700px;
+        font-size: 30px;
         display: block;
+        word-break: keep-all;
     }
 }
